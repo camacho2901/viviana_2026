@@ -20,6 +20,11 @@
     --guindo-600: #7a1730;
     --guindo-500: #8f2242;
 
+    /* Rojo (botones) */
+    --rojo: #c1121f;
+    --rojo-claro: #d32f2f;
+    --rojo-oscuro: #8f0e18;
+
     /* Neutrales */
     --gray-50: #f6f8fb;
     --gray-100: #eef2f7;
@@ -466,7 +471,7 @@ textarea:focus-visible {
 .boton-tarjeta,
 .boton-ingresar {
     display: inline-block;
-    background: linear-gradient(135deg, var(--guindo-600), var(--guindo-800));
+    background: linear-gradient(135deg, var(--rojo-claro), var(--rojo));
     color: var(--blanco);
     text-decoration: none;
     border: none;
@@ -476,16 +481,16 @@ textarea:focus-visible {
     font-weight: 700;
     font-family: inherit;
     cursor: pointer;
-    box-shadow: 0 6px 16px rgba(122, 23, 48, 0.28);
+    box-shadow: 0 6px 16px rgba(193, 18, 31, 0.30);
     transition: var(--transicion);
 }
 
 .boton-acceso:hover,
 .boton-tarjeta:hover,
 .boton-ingresar:hover {
-    background: linear-gradient(135deg, var(--guindo-500), var(--guindo-700));
+    background: linear-gradient(135deg, var(--rojo), var(--rojo-oscuro));
     transform: translateY(-2px);
-    box-shadow: 0 12px 24px rgba(122, 23, 48, 0.38);
+    box-shadow: 0 12px 24px rgba(193, 18, 31, 0.42);
 }
 
 .boton-tarjeta,
@@ -517,8 +522,8 @@ textarea:focus-visible {
 .boton-salir {
     padding: 10px 16px;
     background: var(--blanco);
-    color: var(--negro);
-    border: 1px solid var(--peligro-hover);
+    color: var(--rojo);
+    border: 1px solid var(--rojo);
     border-radius: var(--radio-sm);
     font-size: 12px;
     font-weight: 700;
@@ -527,7 +532,7 @@ textarea:focus-visible {
 }
 
 .boton-salir:hover {
-    background: var(--peligro-bg);
+    background: #fdecec;
     transform: translateY(-2px);
 }
 
@@ -616,8 +621,8 @@ textarea:focus-visible {
 
 .boton-principal {
     display: inline-block;
-    background: var(--blanco);
-    color: var(--navy-800);
+    background: linear-gradient(135deg, var(--rojo-claro), var(--rojo));
+    color: var(--blanco);
     text-decoration: none;
     padding: 14px 24px;
     border-radius: var(--radio-sm);
@@ -630,7 +635,7 @@ textarea:focus-visible {
 .boton-principal:hover {
     transform: translateY(-3px);
     box-shadow: 0 16px 34px rgba(0, 0, 0, 0.35);
-    color: var(--negro);
+    color: var(--blanco);
 }
 
 /* =========================================
@@ -870,9 +875,9 @@ section {
     margin-top: 18px;
     margin-left: 10px;
     padding: 11px 20px;
-    background: var(--gray-100);
-    color: var(--gray-700);
-    border: 1px solid var(--borde);
+    background: var(--blanco);
+    color: var(--rojo);
+    border: 1px solid var(--rojo);
     border-radius: var(--radio-sm);
     font-size: 13px;
     font-weight: 700;
@@ -882,7 +887,7 @@ section {
 }
 
 .boton-cancelar:hover {
-    background: var(--gray-200);
+    background: #fdecec;
 }
 
 /* Actividades (legado) */
@@ -1033,9 +1038,9 @@ section {
 
 .boton-cerrar {
     padding: 9px 15px;
-    background: var(--peligro-bg);
-    color: var(--negro);
-    border: 1px solid var(--peligro-hover);
+    background: var(--rojo);
+    color: var(--blanco);
+    border: 1px solid var(--rojo);
     border-radius: var(--radio-sm);
     font-size: 12px;
     font-weight: 700;
@@ -1045,7 +1050,7 @@ section {
 }
 
 .boton-cerrar:hover {
-    background: var(--peligro-hover);
+    background: var(--rojo-oscuro);
 }
 
 #form-publicar {
@@ -1176,22 +1181,22 @@ section {
 }
 
 .item-editar {
-    background: var(--navy-700);
+    background: var(--rojo);
     color: var(--blanco);
 }
 
 .item-editar:hover {
-    background: var(--navy-800);
+    background: var(--rojo-oscuro);
 }
 
 .item-eliminar {
-    background: var(--peligro-bg);
-    color: var(--negro);
-    border: 1px solid var(--peligro-hover);
+    background: var(--rojo-oscuro);
+    color: var(--blanco);
+    border: 1px solid var(--rojo-oscuro);
 }
 
 .item-eliminar:hover {
-    background: var(--peligro-hover);
+    background: #6d0a12;
 }
 
 .item-vacio {
@@ -1376,9 +1381,13 @@ tr:hover td {
 .pdf-acciones .boton-cerrar {
     display: inline-block;
     text-decoration: none;
-    background: var(--gray-100);
-    color: var(--gray-700);
-    border-color: var(--borde);
+    background: var(--blanco);
+    color: var(--rojo);
+    border-color: var(--rojo);
+}
+
+.pdf-acciones .boton-cerrar:hover {
+    background: #fdecec;
 }
 
 .visor-pdf {
