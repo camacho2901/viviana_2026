@@ -293,12 +293,12 @@ textarea:focus-visible {
     top: 0;
     width: var(--ancho-menu);
     height: 100vh;
-    background: linear-gradient(180deg, var(--guindo-500) 0%, var(--guindo-800) 100%);
+    background: linear-gradient(180deg, #7a0f1a 0%, #35060c 100%);
     color: var(--blanco);
     display: flex;
     flex-direction: column;
     z-index: 1000;
-    box-shadow: 8px 0 32px rgba(87, 16, 33, 0.35);
+    box-shadow: 8px 0 32px rgba(53, 6, 12, 0.5);
 }
 
 .marca {
