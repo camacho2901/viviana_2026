@@ -33,7 +33,7 @@
 
         var chip = document.createElement('span');
         chip.className = 'usuario-activo';
-        chip.textContent = sesion.ci;
+        chip.textContent = sesion.ci + (sesion.rol === 'admin' ? ' · Admin' : '');
         contenedor.appendChild(chip);
 
         var salir = document.createElement('button');

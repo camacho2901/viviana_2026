@@ -2,8 +2,6 @@
     'use strict';
 
     var CLAVE_SESION = 'sesion_san_ignacio';
-    var USUARIO_VALIDO = 'viviana2026';
-    var PASSWORD_VALIDA = 'Admin123';
 
     function mostrarError(mensaje) {
         var error = document.getElementById('login-error');
@@ -29,13 +27,16 @@
             return;
         }
 
-        if (usuario !== USUARIO_VALIDO || password !== PASSWORD_VALIDA) {
+        var cuenta = window.autenticar ? window.autenticar(usuario, password) : null;
+
+        if (!cuenta) {
             mostrarError('Usuario o contraseña incorrectos.');
             return;
         }
 
         localStorage.setItem(CLAVE_SESION, JSON.stringify({
-            ci: usuario,
+            ci: cuenta.usuario,
+            rol: cuenta.rol,
             inicio: new Date().toISOString()
         }));
 

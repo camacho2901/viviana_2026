@@ -43,6 +43,11 @@
         }
     }
 
+    function esAdmin() {
+        var sesion = obtenerSesion();
+        return !!(sesion && sesion.rol === 'admin');
+    }
+
     function crearId() {
         return 'c-' + Date.now() + '-' + Math.random().toString(36).slice(2, 8);
     }
@@ -110,7 +115,7 @@
 
     function render() {
         var datos = leerDatos();
-        var puedeGestionar = !!obtenerSesion();
+        var puedeGestionar = esAdmin();
 
         Object.keys(TIPOS).forEach(function (tipo) {
             var config = TIPOS[tipo];
@@ -142,15 +147,24 @@
 
     function actualizarPaneles() {
         var sesion = obtenerSesion();
+        var admin = esAdmin();
         var panel = document.getElementById('panel-publicar');
         var aviso = document.getElementById('aviso-sesion');
 
         if (panel) {
-            panel.hidden = !sesion;
+            panel.hidden = !admin;
         }
 
         if (aviso) {
-            aviso.hidden = !!sesion;
+            if (admin) {
+                aviso.hidden = true;
+            } else {
+                aviso.hidden = false;
+
+                if (sesion) {
+                    aviso.textContent = 'Tu cuenta es de solo lectura. No puedes publicar.';
+                }
+            }
         }
     }
 
@@ -242,8 +256,8 @@
 
         var sesion = obtenerSesion();
 
-        if (!sesion) {
-            alert('Debes iniciar sesión para publicar.');
+        if (!esAdmin()) {
+            alert('Solo el administrador puede publicar.');
             return;
         }
 
@@ -285,7 +299,7 @@
         }
 
         var eliminar = evento.target.closest('.item-eliminar');
-        if (!eliminar || !obtenerSesion()) {
+        if (!eliminar || !esAdmin()) {
             return;
         }
 
