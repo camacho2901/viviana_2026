@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Horarios - San Ignacio de Loyola</title>
+
+    <link rel="icon" type="image/png" href="logo.png">
+    <link rel="stylesheet" href="estilos.css">
+</head>
+
+<body>
+
+    <aside class="barra-lateral">
+
+        <div class="marca">
+
+            <div class="logo-circular">
+    <img src="logo.png" alt="Logo San Ignacio de Loyola">
+</div>
+
+            <div class="nombre-colegio">
+                <h1>San Ignacio</h1>
+                <p>de Loyola</p>
+                <span>Unidad Educativa</span>
+            </div>
+
+        </div>
+
+        <nav class="menu-lateral">
+
+            <a href="index.html">
+                <span>Inicio</span>
+            </a>
+
+            <a href="comunicados.html">
+                <span>Comunicados</span>
+            </a>
+
+            <a href="noticias.html">
+                <span>Noticias</span>
+            </a>
+
+            <a href="horarios.html" class="activo">
+                <span>Horarios</span>
+            </a>
+
+            <a href="actividades.html">
+                <span>Actividades</span>
+            </a>
+
+            <a href="docentes.html">
+                <span>Atención docente</span>
+            </a>
+
+            <a href="login.html" class="menu-login">
+                <span>Iniciar sesión</span>
+            </a>
+
+        </nav>
+
+        <div class="lateral-pie">
+            <p>Plataforma Web</p>
+            <span>San Ignacio de Loyola</span>
+        </div>
+
+    </aside>
+
+    <div class="contenido-principal">
+
+        <header class="barra-superior">
+
+            <div>
+
+                <span class="pequeno-titulo">
+                    ORGANIZACIÓN ACADÉMICA
+                </span>
+
+                <h2>
+                    Horarios de clases
+                </h2>
+
+            </div>
+
+            <div class="acciones-superior">
+
+                <button class="boton-icono" title="Notificaciones" aria-label="Notificaciones">
+                </button>
+
+                <a href="login.html" class="boton-acceso">
+                    Iniciar sesión
+                </a>
+
+            </div>
+
+        </header>
+
+        <main>
+
+            <section class="seccion">
+
+                <div class="titulo-seccion">
+
+                    <span>ORGANIZACIÓN ACADÉMICA</span>
+
+                    <h2>
+                        Horarios de clases
+                    </h2>
+
+                    <p>
+                        Consulta los horarios correspondientes
+                        a cada curso.
+                    </p>
+
+                </div>
+
+                <div class="tarjeta-grande">
+
+                    <div class="icono-grande icono-clock">
+                    </div>
+
+                    <h3>
+                        Horario semanal
+                    </h3>
+
+                    <p>
+                        Horario de clases de lunes a viernes,
+                        tres materias por día.
+                    </p>
+
+                    <div class="tabla-contenedor" data-horario></div>
+
+                    <button
+                        type="button"
+                        class="boton-tarjeta"
+                        data-regenerar
+                    >
+                        Generar otro horario
+                    </button>
+
+                </div>
+
+            </section>
+
+        </main>
+
+        <footer>
+
+            <div class="pie-contenido">
+
+                <div class="pie-marca">
+
+                    <h3>
+                        Unidad Educativa San Ignacio de Loyola
+                    </h3>
+
+                    <p>
+                        Plataforma Web Educativa
+                    </p>
+
+                </div>
+
+                <div class="pie-enlace">
+
+                    <a
+                        href="https://sites.google.com/view/sanignaciooruro"
+                        target="_blank"
+                        rel="noopener"
+                    >
+                        Sitio web institucional
+                    </a>
+
+                </div>
+
+            </div>
+
+            <div class="pie-inferior">
+
+                <p>
+                    2026 - Todos los derechos reservados
+                </p>
+
+            </div>
+
+        </footer>
+
+    </div>
+
+    <script src="sesion.js"></script>
+    <script src="horario.js"></script>
+
+</body>
+
+</html>

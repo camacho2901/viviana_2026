@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Actividades - San Ignacio de Loyola</title>
+
+    <link rel="icon" type="image/png" href="logo.png">
+    <link rel="stylesheet" href="estilos.css">
+</head>
+
+<body>
+
+    <aside class="barra-lateral">
+
+        <div class="marca">
+
+            <div class="logo-circular">
+    <img src="logo.png" alt="Logo San Ignacio de Loyola">
+</div>
+
+            <div class="nombre-colegio">
+                <h1>San Ignacio</h1>
+                <p>de Loyola</p>
+                <span>Unidad Educativa</span>
+            </div>
+
+        </div>
+
+        <nav class="menu-lateral">
+
+            <a href="index.html">
+                <span>Inicio</span>
+            </a>
+
+            <a href="comunicados.html">
+                <span>Comunicados</span>
+            </a>
+
+            <a href="noticias.html">
+                <span>Noticias</span>
+            </a>
+
+            <a href="horarios.html">
+                <span>Horarios</span>
+            </a>
+
+            <a href="actividades.html" class="activo">
+                <span>Actividades</span>
+            </a>
+
+            <a href="docentes.html">
+                <span>Atención docente</span>
+            </a>
+
+            <a href="login.html" class="menu-login">
+                <span>Iniciar sesión</span>
+            </a>
+
+        </nav>
+
+        <div class="lateral-pie">
+            <p>Plataforma Web</p>
+            <span>San Ignacio de Loyola</span>
+        </div>
+
+    </aside>
+
+    <div class="contenido-principal">
+
+        <header class="barra-superior">
+
+            <div>
+                <span class="pequeno-titulo">
+                    VIDA ACADÉMICA
+                </span>
+
+                <h2>
+                    Actividades académicas
+                </h2>
+            </div>
+
+            <div class="acciones-superior">
+
+                <button class="boton-icono" title="Notificaciones" aria-label="Notificaciones">
+                </button>
+
+                <a href="login.html" class="boton-acceso">
+                    Iniciar sesión
+                </a>
+
+            </div>
+
+        </header>
+
+        <main>
+
+            <section class="seccion">
+
+                <div class="titulo-seccion">
+
+                    <span>VIDA ACADÉMICA</span>
+
+                    <h2>
+                        Actividades académicas
+                    </h2>
+
+                    <p>
+                        Información sobre tareas, actividades
+                        y eventos académicos.
+                    </p>
+
+                </div>
+
+                <p class="aviso-sesion" id="aviso-sesion" hidden>
+
+                    <a href="login.html">Inicia sesión</a>
+                    para publicar tareas, actividades y eventos.
+
+                </p>
+
+                <div class="panel-publicar" id="panel-publicar" hidden>
+
+                    <div class="panel-encabezado">
+
+                        <h3>Publicar nueva actividad</h3>
+
+                        <button
+                            type="button"
+                            id="cerrar-sesion"
+                            class="boton-cerrar"
+                        >
+                            Cerrar sesión
+                        </button>
+
+                    </div>
+
+                    <form id="form-publicar">
+
+                        <div class="campo">
+
+                            <label for="tipo">Tipo</label>
+
+                            <select id="tipo" name="tipo">
+                                <option value="tarea">Tarea</option>
+                                <option value="actividad">Actividad</option>
+                                <option value="evento">Evento</option>
+                            </select>
+
+                        </div>
+
+                        <div class="campo">
+
+                            <label for="titulo">Título</label>
+
+                            <input
+                                type="text"
+                                id="titulo"
+                                name="titulo"
+                                maxlength="120"
+                                required
+                            >
+
+                        </div>
+
+                        <div class="campo campo-ancho">
+
+                            <label for="descripcion">Descripción</label>
+
+                            <textarea
+                                id="descripcion"
+                                name="descripcion"
+                                rows="3"
+                                maxlength="500"
+                                required
+                            ></textarea>
+
+                        </div>
+
+                        <div class="campo" id="campo-fecha" hidden>
+
+                            <label for="fecha">Fecha del evento</label>
+
+                            <input type="date" id="fecha" name="fecha">
+
+                        </div>
+
+                        <div class="campo-acciones">
+
+                            <button
+                                type="submit"
+                                class="boton-tarjeta"
+                                id="boton-publicar"
+                            >
+                                Publicar
+                            </button>
+
+                            <button
+                                type="button"
+                                class="boton-cancelar"
+                                id="cancelar-edicion"
+                                hidden
+                            >
+                                Cancelar
+                            </button>
+
+                        </div>
+
+                    </form>
+
+                </div>
+
+                <div class="tarjetas">
+
+                    <article class="tarjeta">
+
+                        <div class="icono-tarjeta icono-clipboard">
+                        </div>
+
+                        <h3>
+                            Tareas
+                        </h3>
+
+                        <div class="lista-items" id="lista-tarea"></div>
+
+                    </article>
+
+                    <article class="tarjeta">
+
+                        <div class="icono-tarjeta icono-list">
+                        </div>
+
+                        <h3>
+                            Actividades
+                        </h3>
+
+                        <div class="lista-items" id="lista-actividad"></div>
+
+                    </article>
+
+                    <article class="tarjeta">
+
+                        <div class="icono-tarjeta icono-star">
+                        </div>
+
+                        <h3>
+                            Eventos
+                        </h3>
+
+                        <div class="lista-items" id="lista-evento"></div>
+
+                    </article>
+
+                </div>
+
+            </section>
+
+        </main>
+
+        <footer>
+
+            <div class="pie-contenido">
+
+                <div class="pie-marca">
+
+                    <h3>
+                        Unidad Educativa San Ignacio de Loyola
+                    </h3>
+
+                    <p>
+                        Plataforma Web Educativa
+                    </p>
+
+                </div>
+
+                <div class="pie-enlace">
+
+                    <a
+                        href="https://sites.google.com/view/sanignaciooruro"
+                        target="_blank"
+                        rel="noopener"
+                    >
+                        Sitio web institucional
+                    </a>
+
+                </div>
+
+            </div>
+
+            <div class="pie-inferior">
+
+                <p>
+                    2026 - Todos los derechos reservados
+                </p>
+
+            </div>
+
+        </footer>
+
+    </div>
+
+    <script src="sesion.js"></script>
+    <script src="actividades.js"></script>
+
+</body>
+
+</html>
