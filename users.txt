@@ -18,5 +18,5 @@ CUENTAS DE USUARIO:
 
 CUENTA DE ADMIN:
 Usuario: Admin2026
-Usuario: Contraseña
+Contraseña: Admin2026
 
