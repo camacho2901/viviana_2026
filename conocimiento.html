@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Horarios - San Ignacio de Loyola</title>
+    <title>Conocimiento - San Ignacio de Loyola</title>
 
     <link rel="icon" type="image/png" href="logo.png">
     <link rel="stylesheet" href="estilos.css">
@@ -43,7 +43,7 @@
                 <span>Noticias</span>
             </a>
 
-            <a href="horarios.html" class="activo">
+            <a href="horarios.html">
                 <span>Horarios</span>
             </a>
 
@@ -55,7 +55,7 @@
                 <span>Atención docente</span>
             </a>
 
-            <a href="conocimiento.html">
+            <a href="conocimiento.html" class="activo">
                 <span>Conocimiento</span>
             </a>
 
@@ -79,11 +79,11 @@
             <div>
 
                 <span class="pequeno-titulo">
-                    ORGANIZACIÓN ACADÉMICA
+                    RECURSOS EDUCATIVOS
                 </span>
 
                 <h2>
-                    Horarios de clases
+                    Conocimiento
                 </h2>
 
             </div>
@@ -107,22 +107,73 @@
 
                 <div class="titulo-seccion">
 
-                    <span>ORGANIZACIÓN ACADÉMICA</span>
+                    <span>RECURSOS EDUCATIVOS</span>
 
                     <h2>
-                        Horarios de clases
+                        Material de conocimiento
                     </h2>
 
                     <p>
-                        Consulta los horarios correspondientes a cada curso
-                        y sección, de lunes a sábado.
+                        Consulta el material disponible para estudiantes
+                        y docentes de la Unidad Educativa.
                     </p>
 
                 </div>
 
-                <div class="leyenda-materias" id="leyenda-materias"></div>
+                <div class="tabs">
 
-                <div id="horarios"></div>
+                    <button type="button" class="tab activo" data-tab="estudiantes">
+                        Estudiantes
+                    </button>
+
+                    <button type="button" class="tab" data-tab="docentes">
+                        Docentes
+                    </button>
+
+                </div>
+
+                <div class="tab-panel" id="panel-estudiantes">
+
+                    <div class="pdf-grid" id="lista-estudiantes"></div>
+
+                </div>
+
+                <div class="tab-panel" id="panel-docentes" hidden>
+
+                    <div class="pdf-grid" id="lista-docentes"></div>
+
+                </div>
+
+                <div class="visor-pdf" id="visor" hidden>
+
+                    <div class="visor-encabezado">
+
+                        <h3 id="visor-titulo">
+                            Documento
+                        </h3>
+
+                        <div class="visor-acciones">
+
+                            <a
+                                id="visor-abrir"
+                                href="#"
+                                target="_blank"
+                                rel="noopener"
+                            >
+                                Abrir en pestaña
+                            </a>
+
+                            <button type="button" id="visor-cerrar" class="boton-cerrar">
+                                Cerrar
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                    <iframe id="visor-iframe" src="" title="Visor de documento"></iframe>
+
+                </div>
 
             </section>
 
@@ -171,7 +222,7 @@
     </div>
 
     <script src="sesion.js"></script>
-    <script src="horario.js"></script>
+    <script src="conocimiento.js"></script>
 
 </body>
 
