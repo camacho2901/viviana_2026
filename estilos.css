@@ -886,20 +886,198 @@ section {
     margin-top: 18px;
 }
 
-.bienvenida-texto p {
+/* =========================================
+   INICIO: HISTORIA, FUNDADORES E IDENTIDAD
+========================================= */
+
+.linea-tiempo {
+    list-style: none;
+
+    position: relative;
+
+    max-width: 820px;
+
+    margin: 0 auto;
+
+    padding: 10px 0;
+}
+
+.linea-tiempo::before {
+    content: "";
+
+    position: absolute;
+
+    left: 15px;
+    top: 0;
+    bottom: 0;
+
+    width: 3px;
+
+    background: linear-gradient(180deg, var(--guindo), var(--azul));
+
+    border-radius: 3px;
+}
+
+.linea-tiempo li {
+    position: relative;
+
+    padding: 0 0 30px 52px;
+
+    animation: fadeInUp 0.5s ease backwards;
+}
+
+.linea-tiempo li:last-child {
+    padding-bottom: 0;
+}
+
+.linea-tiempo li::before {
+    content: "";
+
+    position: absolute;
+
+    left: 8px;
+    top: 4px;
+
+    width: 17px;
+    height: 17px;
+
+    background: white;
+
+    border: 3px solid var(--guindo);
+
+    border-radius: 50%;
+
+    box-shadow: 0 0 0 4px rgba(122, 23, 48, 0.12);
+}
+
+.linea-tiempo .anio {
+    display: inline-block;
+
+    color: var(--guindo);
+
+    font-size: 14px;
+
+    font-weight: bold;
+
+    letter-spacing: 0.5px;
+
+    margin-bottom: 2px;
+}
+
+.linea-tiempo h3 {
+    color: var(--azul);
+
+    font-size: 17px;
+
+    margin-bottom: 6px;
+}
+
+.linea-tiempo p {
+    color: var(--texto-suave);
+
+    font-size: 14px;
+
+    line-height: 1.65;
+}
+
+.fundadores {
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 20px;
+}
+
+.fundador {
+    background: white;
+
+    border: 1px solid var(--borde);
+
+    border-top: 4px solid var(--guindo);
+
+    border-radius: 14px;
+
+    padding: 24px;
+
+    box-shadow: var(--sombra-sm);
+
+    transition: var(--transicion);
+
+    animation: fadeInUp 0.6s ease backwards;
+}
+
+.fundador:hover {
+    transform: translateY(-6px);
+
+    box-shadow: var(--sombra-lg);
+}
+
+.fundador h3 {
+    color: var(--azul);
+
+    font-size: 16px;
+
+    margin-bottom: 8px;
+}
+
+.fundador p {
+    color: var(--texto-suave);
+
+    font-size: 13px;
+
+    line-height: 1.6;
+}
+
+.destacado-identidad {
+    position: relative;
+
+    overflow: hidden;
+
+    background: linear-gradient(135deg, var(--azul), var(--guindo-oscuro));
+
+    color: white;
+
+    border-radius: 20px;
+
+    padding: 55px 45px;
+
+    text-align: center;
+
+    box-shadow: var(--sombra-lg);
+
+    animation: fadeInUp 0.6s ease backwards;
+}
+
+.destacado-identidad > span {
+    display: inline-block;
+
+    color: #e6b9c6;
+
+    font-size: 12px;
+
+    font-weight: bold;
+
+    letter-spacing: 2px;
+
     margin-bottom: 14px;
 }
 
-.bienvenida-texto p.destacado {
-    color: var(--guindo);
+.destacado-identidad h2 {
+    font-size: 32px;
+
+    margin-bottom: 16px;
+}
+
+.destacado-identidad p {
+    max-width: 720px;
+
+    margin: 0 auto;
+
+    color: rgba(255, 255, 255, 0.9);
 
     font-size: 15px;
 
-    font-weight: bold;
-}
-
-.bienvenida-texto p:last-child {
-    margin-bottom: 0;
+    line-height: 1.8;
 }
 
 
@@ -1680,7 +1858,8 @@ footer {
     }
 
     .tarjetas,
-    .actividades {
+    .actividades,
+    .fundadores {
         grid-template-columns: repeat(2, 1fr);
     }
 
@@ -1785,12 +1964,21 @@ footer {
 
     .tarjetas,
     .noticias,
-    .actividades {
+    .actividades,
+    .fundadores {
         grid-template-columns: 1fr;
     }
 
-    .titulo-seccion {
+    .titulo-seccion h2 {
         font-size: 24px;
+    }
+
+    .destacado-identidad {
+        padding: 40px 25px;
+    }
+
+    .destacado-identidad h2 {
+        font-size: 26px;
     }
 
 }

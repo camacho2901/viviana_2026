@@ -1,0 +1,20 @@
+CUENTAS DE USUARIO:
+#	Usuario	Contraseña	#	Usuario	Contraseña
+1	anaflores	48213957	16	oscarcabrera	50831726
+2	luismamani	90347126	17	paolacortez	92476015
+3	carlacondori	17459038	18	fernandolopez	36104829
+4	jorgequispe	62840193	19	andrearamos	84720593
+5	mariachoque	35908712	20	hugosalazar	15963280
+6	pedrocruz	72015486	21	valeriamiranda	48027156
+7	rosaapaza	24681903	22	ivantomaya	69251830
+8	juancalle	89120574	23	nadiaponce	30584917
+9	elenatapia	53791648	24	sebastianvega	87164025
+10	diegohuanca	40572819	25	camilaurquieta	21478963
+11	sofiagutierrez	96318407	26	martinaguilar	56039471
+12	raulvargas	21847596	27	gabrielcastro	73852106
+13	lilianacolque	67492031	28	renatobaldivieso	14907358
+14	miguelrojas	18205649	29	marisolchuquimia	90526483
+15	danielamendoza	73964180	30	alvaromaquera	62730194
+CUENTA DE ADMIN:
+Usuario: Admin2026
+Usuario: Contraseña
