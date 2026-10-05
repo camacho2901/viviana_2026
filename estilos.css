@@ -437,7 +437,7 @@ textarea:focus-visible {
 
 .pequeno-titulo {
     font-size: 10px;
-    color: var(--guindo);
+    color: var(--negro);
     letter-spacing: 1.5px;
     font-weight: 700;
 }
@@ -475,7 +475,7 @@ textarea:focus-visible {
 
 .boton-icono:hover {
     background: var(--gray-50);
-    color: var(--guindo);
+    color: var(--negro);
     transform: translateY(-2px);
     box-shadow: var(--sombra-sm);
 }
@@ -535,7 +535,7 @@ textarea:focus-visible {
 .boton-salir {
     padding: 10px 16px;
     background: var(--blanco);
-    color: var(--peligro);
+    color: var(--negro);
     border: 1px solid var(--peligro-hover);
     border-radius: var(--radio-sm);
     font-size: 12px;
@@ -648,7 +648,7 @@ textarea:focus-visible {
 .boton-principal:hover {
     transform: translateY(-3px);
     box-shadow: 0 16px 34px rgba(0, 0, 0, 0.35);
-    color: var(--guindo);
+    color: var(--negro);
 }
 
 /* =========================================
@@ -674,7 +674,7 @@ section {
     display: inline-flex;
     align-items: center;
     gap: 10px;
-    color: var(--guindo);
+    color: var(--negro);
     font-size: 12px;
     font-weight: 700;
     letter-spacing: 2px;
@@ -780,7 +780,7 @@ section {
     height: 52px;
     border-radius: var(--radio-md);
     background: linear-gradient(135deg, #f7e9ee, #edd3dc);
-    color: var(--guindo);
+    color: var(--negro);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -797,7 +797,7 @@ section {
 .noticia h3,
 .tarjeta-grande h3,
 .actividad h3 {
-    color: var(--guindo);
+    color: var(--negro);
 }
 
 .tarjeta h3 {
@@ -939,7 +939,7 @@ section {
 }
 
 .login h2 {
-    color: var(--guindo);
+    color: var(--negro);
     font-size: 23px;
     margin-bottom: 10px;
 }
@@ -977,13 +977,13 @@ section {
 }
 
 .login input:focus {
-    border-color: var(--guindo);
+    border-color: var(--negro);
     box-shadow: var(--anillo);
 }
 
 .login-error {
     background: var(--peligro-bg);
-    color: var(--peligro);
+    color: var(--negro);
     border: 1px solid var(--peligro-hover);
     border-radius: var(--radio-sm);
     padding: 10px 14px;
@@ -1017,7 +1017,7 @@ section {
 }
 
 .aviso-sesion a {
-    color: var(--guindo);
+    color: var(--negro);
     font-weight: 700;
     text-decoration: none;
 }
@@ -1045,14 +1045,14 @@ section {
 }
 
 .panel-encabezado h3 {
-    color: var(--guindo);
+    color: var(--negro);
     font-size: 18px;
 }
 
 .boton-cerrar {
     padding: 9px 15px;
     background: var(--peligro-bg);
-    color: var(--peligro);
+    color: var(--negro);
     border: 1px solid var(--peligro-hover);
     border-radius: var(--radio-sm);
     font-size: 12px;
@@ -1111,7 +1111,7 @@ section {
 .campo input:focus,
 .campo select:focus,
 .campo textarea:focus {
-    border-color: var(--guindo);
+    border-color: var(--negro);
     box-shadow: var(--anillo);
 }
 
@@ -1145,7 +1145,7 @@ section {
 }
 
 .item h4 {
-    color: var(--guindo);
+    color: var(--negro);
     font-size: 15px;
     margin-bottom: 5px;
     padding-right: 140px;
@@ -1161,7 +1161,7 @@ section {
     margin-top: 8px;
     padding: 3px 12px;
     background: #f7e9ee;
-    color: var(--guindo);
+    color: var(--negro);
     border-radius: 999px;
     font-size: 12px;
     font-weight: 700;
@@ -1204,7 +1204,7 @@ section {
 
 .item-eliminar {
     background: var(--peligro-bg);
-    color: var(--peligro);
+    color: var(--negro);
     border: 1px solid var(--peligro-hover);
 }
 
@@ -1277,7 +1277,7 @@ tr:hover td {
     display: inline-block;
     padding: 5px 12px;
     background: #f7e9ee;
-    color: var(--guindo);
+    color: var(--negro);
     border-radius: 999px;
     font-size: 12px;
     font-weight: 700;
@@ -1294,7 +1294,7 @@ tr:hover td {
 }
 
 .horario-curso h3 {
-    color: var(--guindo);
+    color: var(--negro);
     font-size: 20px;
     margin-bottom: 16px;
 }
@@ -1338,12 +1338,12 @@ tr:hover td {
 }
 
 .tab:hover {
-    color: var(--guindo);
+    color: var(--negro);
 }
 
 .tab.activo {
-    color: var(--guindo);
-    border-bottom-color: var(--guindo);
+    color: var(--negro);
+    border-bottom-color: var(--negro);
 }
 
 .pdf-grid {
@@ -1501,7 +1501,7 @@ tr:hover td {
 
 .linea-tiempo .anio {
     display: inline-block;
-    color: var(--guindo);
+    color: var(--negro);
     font-size: 14px;
     font-weight: 700;
     letter-spacing: 0.5px;
@@ -1566,7 +1566,7 @@ tr:hover td {
 
 .destacado-identidad > span {
     display: inline-block;
-    color: #eab9c7;
+    color: rgba(255, 255, 255, 0.82);
     font-size: 12px;
     font-weight: 700;
     letter-spacing: 2px;
@@ -1634,7 +1634,7 @@ footer {
 
 .pie-enlace a:hover {
     background: var(--guindo);
-    border-color: var(--guindo);
+    border-color: var(--negro);
     transform: translateY(-2px);
     box-shadow: 0 8px 18px rgba(0, 0, 0, 0.3);
 }
