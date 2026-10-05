@@ -68,6 +68,7 @@
     --transicion: all 0.25s ease;
     --fuente: "Plus Jakarta Sans", "Segoe UI", system-ui, -apple-system, "Helvetica Neue", Roboto, Arial, sans-serif;
     --fuente-titulo: "Sora", "Plus Jakarta Sans", "Segoe UI", system-ui, sans-serif;
+    --ancho-menu: 260px;
 }
 
 /* =========================================
@@ -109,8 +110,7 @@ h1, h2, h3, h4 {
 }
 
 .nombre-colegio h1,
-.nombre-colegio p,
-.lateral-pie span {
+.nombre-colegio p {
     font-family: var(--fuente-titulo);
 }
 
@@ -286,14 +286,14 @@ textarea:focus-visible {
     position: fixed;
     left: 0;
     top: 0;
-    width: 260px;
+    width: var(--ancho-menu);
     height: 100vh;
-    background: linear-gradient(180deg, var(--navy-800) 0%, var(--navy-900) 100%);
+    background: linear-gradient(180deg, var(--guindo-500) 0%, var(--guindo-800) 100%);
     color: var(--blanco);
     display: flex;
     flex-direction: column;
     z-index: 1000;
-    box-shadow: 8px 0 32px rgba(10, 23, 41, 0.35);
+    box-shadow: 8px 0 32px rgba(87, 16, 33, 0.35);
 }
 
 .marca {
@@ -388,30 +388,12 @@ textarea:focus-visible {
     margin-top: 10px;
 }
 
-.lateral-pie {
-    margin-top: auto;
-    padding: 20px;
-    border-top: 1px solid rgba(255, 255, 255, 0.10);
-    text-align: center;
-}
-
-.lateral-pie p {
-    font-size: 12px;
-    color: rgba(255, 255, 255, 0.75);
-    margin-bottom: 4px;
-}
-
-.lateral-pie span {
-    font-size: 18px;
-    color: rgba(255, 255, 255, 0.6);
-}
-
 /* =========================================
    5. CONTENIDO Y BARRA SUPERIOR
 ========================================= */
 
 .contenido-principal {
-    margin-left: 260px;
+    margin-left: var(--ancho-menu);
     min-height: 100vh;
     display: flex;
     flex-direction: column;
@@ -1592,11 +1574,15 @@ tr:hover td {
 ========================================= */
 
 footer {
-    background: linear-gradient(180deg, var(--navy-900), #071322);
+    background: #000000;
     color: var(--blanco);
     padding: 36px 45px 20px;
     border-top: 4px solid var(--guindo);
-    box-shadow: 0 -10px 30px rgba(10, 23, 41, 0.35);
+    position: relative;
+    z-index: 1100;
+    margin-left: calc(-1 * var(--ancho-menu));
+    width: calc(100% + var(--ancho-menu));
+    box-shadow: 0 -10px 30px rgba(0, 0, 0, 0.45);
 }
 
 .pie-contenido {
@@ -1655,12 +1641,8 @@ footer {
 
 @media (max-width: 1000px) {
 
-    .barra-lateral {
-        width: 220px;
-    }
-
-    .contenido-principal {
-        margin-left: 220px;
+    :root {
+        --ancho-menu: 220px;
     }
 
     .tarjetas,
@@ -1676,6 +1658,10 @@ footer {
 }
 
 @media (max-width: 750px) {
+
+    :root {
+        --ancho-menu: 0px;
+    }
 
     .barra-lateral {
         position: relative;
@@ -1701,14 +1687,6 @@ footer {
 
     .menu-lateral a.activo::after {
         display: none;
-    }
-
-    .lateral-pie {
-        display: none;
-    }
-
-    .contenido-principal {
-        margin-left: 0;
     }
 
     .barra-superior {
