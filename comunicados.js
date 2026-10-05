@@ -19,7 +19,43 @@
         }
     };
 
+    var DEMO = [
+        {
+            id: 'demo-com-1',
+            tipo: 'comunicado',
+            titulo: 'Inicio de clases 2026',
+            descripcion: 'Damos la bienvenida a todos los estudiantes al nuevo año escolar. Las clases inician el lunes 2 de febrero.',
+            fecha: '',
+            autor: 'Admin2026',
+            creado: '2026-01-20T10:00:00.000Z'
+        },
+        {
+            id: 'demo-avi-1',
+            tipo: 'aviso',
+            titulo: 'Reunión de padres de familia',
+            descripcion: 'Se convoca a los padres de familia a la reunión informativa el viernes 6 de febrero a las 18:00 en el salón de actos.',
+            fecha: '',
+            autor: 'Admin2026',
+            creado: '2026-01-22T15:30:00.000Z'
+        },
+        {
+            id: 'demo-fecha-1',
+            tipo: 'fecha',
+            titulo: 'Aniversario de la institución',
+            descripcion: 'Conmemoración del aniversario de fundación de la Unidad Educativa (3 de febrero de 1956).',
+            fecha: '2026-02-03',
+            autor: 'Admin2026',
+            creado: '2026-01-25T09:00:00.000Z'
+        }
+    ];
+
     var idEnEdicion = null;
+
+    function inicializar() {
+        if (localStorage.getItem(CLAVE_DATOS) === null) {
+            guardarDatos(DEMO);
+        }
+    }
 
     function leerDatos() {
         try {
@@ -353,6 +389,7 @@
 
         actualizarPaneles();
         alternarCampoFecha();
+        inicializar();
         render();
     });
 })();

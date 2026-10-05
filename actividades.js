@@ -19,7 +19,43 @@
         }
     };
 
+    var DEMO = [
+        {
+            id: 'demo-tar-1',
+            tipo: 'tarea',
+            titulo: 'Práctica de Matemáticas',
+            descripcion: 'Resolver los ejercicios de la unidad 1 sobre ecuaciones de primer grado y presentarlos en la siguiente clase.',
+            fecha: '',
+            autor: 'Admin2026',
+            creado: '2026-01-21T08:00:00.000Z'
+        },
+        {
+            id: 'demo-act-1',
+            tipo: 'actividad',
+            titulo: 'Feria de Ciencias',
+            descripcion: 'Los estudiantes presentarán proyectos de investigación por curso en el patio central de la institución.',
+            fecha: '',
+            autor: 'Admin2026',
+            creado: '2026-01-23T14:00:00.000Z'
+        },
+        {
+            id: 'demo-eve-1',
+            tipo: 'evento',
+            titulo: 'Aniversario del colegio',
+            descripcion: 'Acto central y desfile por el aniversario de fundación de la Unidad Educativa San Ignacio de Loyola.',
+            fecha: '2026-02-03',
+            autor: 'Admin2026',
+            creado: '2026-01-25T09:30:00.000Z'
+        }
+    ];
+
     var idEnEdicion = null;
+
+    function inicializar() {
+        if (localStorage.getItem(CLAVE_DATOS) === null) {
+            guardarDatos(DEMO);
+        }
+    }
 
     function leerDatos() {
         try {
@@ -353,6 +389,7 @@
 
         actualizarPaneles();
         alternarCampoFecha();
+        inicializar();
         render();
     });
 })();

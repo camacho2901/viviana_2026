@@ -59,10 +59,6 @@
         titulo.textContent = item.titulo;
         tarjeta.appendChild(titulo);
 
-        var archivo = document.createElement('p');
-        archivo.textContent = item.archivo;
-        tarjeta.appendChild(archivo);
-
         var acciones = document.createElement('div');
         acciones.className = 'pdf-acciones';
 

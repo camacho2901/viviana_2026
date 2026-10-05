@@ -6,7 +6,30 @@
     var CONTENEDOR = 'lista-noticias';
     var VACIO = 'No hay noticias publicadas.';
 
+    var DEMO = [
+        {
+            id: 'demo-not-1',
+            titulo: 'Bienvenidos al año escolar 2026',
+            descripcion: 'La Unidad Educativa San Ignacio de Loyola abre sus puertas con renovadas expectativas y un firme compromiso con la formación integral de sus estudiantes.',
+            autor: 'Admin2026',
+            creado: '2026-01-20T10:00:00.000Z'
+        },
+        {
+            id: 'demo-not-2',
+            titulo: 'Formación técnica en Sistemas Informáticos',
+            descripcion: 'Los estudiantes del Bachillerato Técnico Humanístico continúan fortaleciendo sus competencias tecnológicas para su futuro académico y laboral.',
+            autor: 'Admin2026',
+            creado: '2026-01-22T11:00:00.000Z'
+        }
+    ];
+
     var idEnEdicion = null;
+
+    function inicializar() {
+        if (localStorage.getItem(CLAVE_DATOS) === null) {
+            guardarDatos(DEMO);
+        }
+    }
 
     function leerDatos() {
         try {
@@ -278,6 +301,7 @@
         }
 
         actualizarPaneles();
+        inicializar();
         render();
     });
 })();
