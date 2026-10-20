@@ -14,6 +14,30 @@
         { titulo: 'Documento para docentes', archivo: 'doc.pdf' }
     ];
 
+    var CARPETA_COMPENDIO = 'Compendio de Textos por Areas/';
+
+    var COMPENDIO = [
+        { titulo: 'Área Artes Plásticas', archivo: 'Área Artes Plásticas.pdf' },
+        { titulo: 'Área Biología y Geografía', archivo: 'Área Biología y Geografía.pdf' },
+        { titulo: 'Área Ciencias Sociales', archivo: 'Área Ciencias Sociales.pdf' },
+        { titulo: 'Área Cosmovisiones, Filosofía y Sicología', archivo: 'Área Cosmovisiones, Filosofía y Sicología.pdf' },
+        { titulo: 'Área Educación Física y Deportes', archivo: 'Área Educación Física y Deportes.pdf' },
+        { titulo: 'Área Física', archivo: 'Área FÍsica.pdf' },
+        { titulo: 'Área Lengua Castellana', archivo: 'Área Lengua Castellana.pdf' },
+        { titulo: 'Área Lengua Extranjera', archivo: 'Área Lengua Extranjera.pdf' },
+        { titulo: 'Área Lengua Originaria', archivo: 'Área Lengua Originaria.pdf' },
+        { titulo: 'Área Matemática', archivo: 'Área matemática.pdf' },
+        { titulo: 'Área Música', archivo: 'Área Música.pdf' },
+        { titulo: 'Área Química', archivo: 'Área Química.pdf' },
+        { titulo: 'Área Técnica Tecnológica General', archivo: 'Área Técnica Tecnológica General.pdf' },
+        { titulo: 'Área Valores, Espiritualidad y Religiones', archivo: 'Área Valores, Espiritualidad y Religiones.pdf' }
+    ].map(function (item) {
+        return {
+            titulo: item.titulo,
+            archivo: encodeURI(CARPETA_COMPENDIO + item.archivo)
+        };
+    });
+
     function abrirVisor(item) {
         var visor = document.getElementById('visor');
         var iframe = document.getElementById('visor-iframe');
@@ -103,21 +127,25 @@
             tab.classList.toggle('activo', tab.getAttribute('data-tab') === nombre);
         });
 
-        var panelEstudiantes = document.getElementById('panel-estudiantes');
-        var panelDocentes = document.getElementById('panel-docentes');
+        var paneles = {
+            estudiantes: 'panel-estudiantes',
+            docentes: 'panel-docentes',
+            compendio: 'panel-compendio'
+        };
 
-        if (panelEstudiantes) {
-            panelEstudiantes.hidden = nombre !== 'estudiantes';
-        }
+        Object.keys(paneles).forEach(function (clave) {
+            var panel = document.getElementById(paneles[clave]);
 
-        if (panelDocentes) {
-            panelDocentes.hidden = nombre !== 'docentes';
-        }
+            if (panel) {
+                panel.hidden = clave !== nombre;
+            }
+        });
     }
 
     document.addEventListener('DOMContentLoaded', function () {
         renderLista('lista-estudiantes', ESTUDIANTES);
         renderLista('lista-docentes', DOCENTES);
+        renderLista('lista-compendio', COMPENDIO);
 
         var tabs = document.querySelectorAll('.tab');
         Array.prototype.forEach.call(tabs, function (tab) {
