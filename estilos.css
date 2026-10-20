@@ -1811,3 +1811,174 @@ footer {
         scroll-behavior: auto !important;
     }
 }
+/* =========================================
+   18. PLANTEL DOCENTE
+========================================= */
+
+.titulo-seccion.separado {
+    margin-top: 60px;
+}
+
+.plantel-herramientas {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 14px;
+    margin-bottom: 24px;
+}
+
+.plantel-buscador {
+    position: relative;
+    flex: 1 1 280px;
+    max-width: 380px;
+}
+
+.plantel-buscador input {
+    width: 100%;
+    padding: 12px 16px;
+    background: var(--blanco);
+    border: 1px solid var(--borde);
+    border-radius: var(--radio-sm);
+    color: var(--texto);
+    font-size: 14px;
+    font-family: inherit;
+    box-shadow: var(--sombra-xs);
+    transition: var(--transicion);
+}
+
+.plantel-buscador input::placeholder {
+    color: var(--gray-400);
+}
+
+.plantel-buscador input:focus {
+    outline: none;
+    border-color: var(--rojo);
+    box-shadow: var(--anillo);
+}
+
+.plantel-contador {
+    color: var(--texto-suave);
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.plantel-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.docente-card {
+    background: var(--blanco);
+    border: 1px solid var(--borde);
+    border-top: 3px solid var(--rojo);
+    border-radius: var(--radio-lg);
+    padding: 22px;
+    box-shadow: var(--sombra-sm);
+    transition: var(--transicion);
+    animation: fadeInUp 0.5s ease backwards;
+}
+
+.docente-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--sombra-md);
+}
+
+.docente-cabecera {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding-bottom: 16px;
+    margin-bottom: 16px;
+    border-bottom: 1px solid var(--borde);
+}
+
+.docente-avatar {
+    flex-shrink: 0;
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, var(--guindo-600), var(--guindo-800));
+    color: var(--blanco);
+    border-radius: 50%;
+    font-size: 15px;
+    font-weight: 800;
+    letter-spacing: 0.5px;
+}
+
+.docente-nombre {
+    color: var(--negro);
+    font-size: 16px;
+    font-weight: 800;
+    line-height: 1.25;
+}
+
+.docente-cargo {
+    display: block;
+    margin-top: 3px;
+    color: var(--texto-suave);
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.docente-dias {
+    display: grid;
+    gap: 10px;
+}
+
+.docente-dia {
+    display: grid;
+    grid-template-columns: 82px 1fr;
+    gap: 10px;
+    align-items: start;
+}
+
+.docente-dia-label {
+    padding-top: 3px;
+    color: var(--texto-suave);
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 0.08em;
+}
+
+.docente-dia-cursos {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+}
+
+.docente-curso {
+    display: inline-block;
+    padding: 3px 8px;
+    background: #f8e7ea;
+    border: 1px solid #ecd0d6;
+    border-radius: 6px;
+    color: var(--rojo-oscuro);
+    font-size: 11px;
+    font-weight: 700;
+}
+
+.docente-curso-tarde {
+    background: var(--navy-800);
+    border-color: var(--navy-800);
+    color: var(--blanco);
+}
+
+.docente-sin {
+    color: var(--gray-400);
+    font-size: 13px;
+    font-style: italic;
+}
+
+@media (max-width: 750px) {
+    .titulo-seccion.separado {
+        margin-top: 46px;
+    }
+
+    .plantel-grid {
+        grid-template-columns: 1fr;
+    }
+}

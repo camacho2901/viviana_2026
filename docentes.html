@@ -117,38 +117,89 @@
                 <div class="titulo-seccion">
 
                     <span>
-                        ATENCIÓN
+                        NORMATIVA
                     </span>
 
                     <h2>
-                        Horarios de atención docente
+                        Normas y lineamientos
                     </h2>
 
                     <p>
-                        Docentes y cursos/secciones asignados en las
-                        columnas correspondientes.
+                        Consulta los documentos normativos que rigen
+                        la labor docente de la Unidad Educativa.
                     </p>
 
                 </div>
 
+                <div class="pdf-grid" id="lista-normas"></div>
 
-                <div class="tarjeta-grande">
+                <div class="visor-pdf" id="visor" hidden>
 
-                    <div class="icono-grande icono-person">
+                    <div class="visor-encabezado">
+
+                        <h3 id="visor-titulo">
+                            Documento
+                        </h3>
+
+                        <div class="visor-acciones">
+
+                            <a
+                                id="visor-abrir"
+                                href="#"
+                                target="_blank"
+                                rel="noopener"
+                            >
+                                Abrir en pestaña
+                            </a>
+
+                            <button type="button" id="visor-cerrar" class="boton-cerrar">
+                                Cerrar
+                            </button>
+
+                        </div>
+
                     </div>
 
-                    <h3>
-                        Asignación de docentes
-                    </h3>
-
-                    <p>
-                        Esta sección relaciona a los docentes con los
-                        cursos y secciones asignados.
-                    </p>
-
-                    <div class="tabla-contenedor" id="asignacion-docentes"></div>
+                    <iframe id="visor-iframe" src="" title="Visor de documento"></iframe>
 
                 </div>
+
+                <div class="titulo-seccion separado">
+
+                    <span>
+                        PLANTEL DOCENTE
+                    </span>
+
+                    <h2>
+                        Nuestros docentes
+                    </h2>
+
+                    <p>
+                        Docentes de la Unidad Educativa y sus cursos
+                        asignados por día.
+                    </p>
+
+                </div>
+
+                <div class="plantel-herramientas">
+
+                    <div class="plantel-buscador">
+
+                        <input
+                            type="search"
+                            id="buscador-docentes"
+                            placeholder="Buscar docente o curso..."
+                            aria-label="Buscar docente o curso"
+                            autocomplete="off"
+                        >
+
+                    </div>
+
+                    <span class="plantel-contador" id="contador-docentes"></span>
+
+                </div>
+
+                <div class="plantel-grid" id="plantel-docentes"></div>
 
             </section>
 
@@ -198,7 +249,7 @@
     </div>
 
     <script src="sesion.js"></script>
-    <script src="horario.js"></script>
+    <script src="docentes.js"></script>
 
 </body>
 
