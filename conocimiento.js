@@ -130,7 +130,8 @@
         var paneles = {
             estudiantes: 'panel-estudiantes',
             docentes: 'panel-docentes',
-            compendio: 'panel-compendio'
+            compendio: 'panel-compendio',
+            plantel: 'panel-plantel'
         };
 
         Object.keys(paneles).forEach(function (clave) {

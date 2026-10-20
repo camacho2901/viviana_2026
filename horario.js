@@ -156,10 +156,11 @@
                 return;
             }
 
-            var chip = document.createElement('span');
+            var chip = document.createElement('a');
             chip.className = 'materia-chip';
             chip.textContent = codigo;
-            chip.title = ABREV[codigo] || codigo;
+            chip.title = (ABREV[codigo] || codigo) + ' · Ver docentes';
+            chip.href = 'conocimiento.html?tab=plantel&materia=' + encodeURIComponent(codigo);
             celda.appendChild(chip);
         });
 

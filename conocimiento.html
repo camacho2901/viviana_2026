@@ -132,6 +132,10 @@
                         Compendio de Textos por Áreas
                     </button>
 
+                    <button type="button" class="tab" data-tab="plantel">
+                        Plantel docente
+                    </button>
+
                 </div>
 
                 <div class="tab-panel" id="panel-estudiantes">
@@ -149,6 +153,32 @@
                 <div class="tab-panel" id="panel-compendio" hidden>
 
                     <div class="pdf-grid" id="lista-compendio"></div>
+
+                </div>
+
+                <div class="tab-panel" id="panel-plantel" hidden>
+
+                    <div id="plantel-aviso"></div>
+
+                    <div class="plantel-herramientas">
+
+                        <div class="plantel-buscador">
+
+                            <input
+                                type="search"
+                                id="buscador-docentes"
+                                placeholder="Buscar docente, curso o materia..."
+                                aria-label="Buscar docente, curso o materia"
+                                autocomplete="off"
+                            >
+
+                        </div>
+
+                        <span class="plantel-contador" id="contador-docentes"></span>
+
+                    </div>
+
+                    <div class="plantel-grid" id="plantel-docentes"></div>
 
                 </div>
 
@@ -229,8 +259,43 @@
 
     </div>
 
+    <div class="modal-fondo" id="modal-materias" hidden>
+
+        <div class="modal-caja" role="dialog" aria-modal="true" aria-labelledby="modal-titulo">
+
+            <div class="modal-cabecera">
+
+                <h3 id="modal-titulo">
+                    Materias
+                </h3>
+
+                <button type="button" class="modal-x" id="modal-cerrar" aria-label="Cerrar">
+                    &times;
+                </button>
+
+            </div>
+
+            <div class="modal-cuerpo" id="modal-lista"></div>
+
+            <div class="modal-pie">
+
+                <button type="button" class="boton-cancelar" id="modal-cancelar">
+                    Cancelar
+                </button>
+
+                <button type="button" class="boton-tarjeta" id="modal-guardar">
+                    Guardar
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
     <script src="sesion.js"></script>
     <script src="conocimiento.js"></script>
+    <script src="plantel.js"></script>
 
 </body>
 

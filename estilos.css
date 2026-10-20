@@ -2021,3 +2021,269 @@ footer {
         grid-template-columns: 1fr;
     }
 }
+
+/* =========================================
+   19. MATERIAS, PLANTEL Y EDITOR
+========================================= */
+
+a.materia-chip {
+    text-decoration: none;
+    cursor: pointer;
+    transition: var(--transicion);
+}
+
+a.materia-chip:hover {
+    background: var(--guindo);
+    color: var(--blanco);
+    transform: translateY(-1px);
+}
+
+a.materia-chip:focus-visible {
+    outline: 2px solid var(--rojo);
+    outline-offset: 2px;
+}
+
+.docente-materias {
+    margin-bottom: 18px;
+}
+
+.docente-materias-label {
+    display: block;
+    margin-bottom: 7px;
+    color: var(--texto-suave);
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+.docente-materias-lista {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+}
+
+.docente-materia {
+    padding: 4px 10px;
+    background: #f8e7ea;
+    border: 1px solid #ecd0d6;
+    border-radius: 999px;
+    color: var(--rojo-oscuro);
+    font-size: 11px;
+    font-weight: 700;
+}
+
+.docente-materia.activa {
+    background: var(--rojo);
+    border-color: var(--rojo);
+    color: var(--blanco);
+}
+
+.docente-materias-vacio {
+    color: var(--gray-400);
+    font-size: 12px;
+    font-style: italic;
+}
+
+.docente-editar {
+    width: 100%;
+    margin-top: 18px;
+    padding: 9px 14px;
+    background: var(--blanco);
+    border: 1px solid var(--rojo);
+    border-radius: var(--radio-sm);
+    color: var(--rojo);
+    font-family: inherit;
+    font-size: 12px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: var(--transicion);
+}
+
+.docente-editar:hover {
+    background: #f8e7ea;
+}
+
+.docente-card.destacado {
+    background: #fffafa;
+    border-color: var(--rojo);
+    box-shadow: 0 0 0 3px rgba(112, 16, 28, 0.16), var(--sombra-md);
+}
+
+.docente-card.destacado .docente-avatar {
+    box-shadow: 0 0 0 4px rgba(112, 16, 28, 0.14);
+}
+
+.docente-card.atenuado {
+    opacity: 0.4;
+}
+
+.docente-card.atenuado:hover {
+    opacity: 1;
+}
+
+.plantel-aviso {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 14px;
+    margin-bottom: 20px;
+    padding: 14px 18px;
+    background: #f8e7ea;
+    border: 1px solid #ecd0d6;
+    border-left: 4px solid var(--rojo);
+    border-radius: var(--radio-sm);
+}
+
+.plantel-aviso-texto {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.plantel-aviso-texto strong {
+    color: var(--rojo-oscuro);
+    font-size: 14px;
+    font-weight: 800;
+}
+
+.plantel-aviso-texto span {
+    color: var(--gray-600);
+    font-size: 12px;
+}
+
+.plantel-aviso-limpiar {
+    padding: 8px 14px;
+    background: var(--rojo);
+    border: none;
+    border-radius: var(--radio-sm);
+    color: var(--blanco);
+    font-family: inherit;
+    font-size: 12px;
+    font-weight: 700;
+    cursor: pointer;
+    white-space: nowrap;
+    transition: var(--transicion);
+}
+
+.plantel-aviso-limpiar:hover {
+    background: var(--rojo-oscuro);
+}
+
+.modal-fondo {
+    position: fixed;
+    inset: 0;
+    z-index: 2000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    background: rgba(14, 14, 16, 0.55);
+}
+
+.modal-fondo[hidden] {
+    display: none;
+}
+
+.modal-caja {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 560px;
+    max-height: 88vh;
+    background: var(--blanco);
+    border-radius: var(--radio-lg);
+    box-shadow: var(--sombra-lg);
+    overflow: hidden;
+}
+
+.modal-cabecera {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 14px;
+    padding: 20px 24px;
+    border-bottom: 1px solid var(--borde);
+}
+
+.modal-cabecera h3 {
+    color: var(--navy-800);
+    font-size: 18px;
+}
+
+.modal-x {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 34px;
+    height: 34px;
+    background: var(--gray-50);
+    border: 1px solid var(--borde);
+    border-radius: 50%;
+    color: var(--gray-600);
+    font-size: 20px;
+    line-height: 1;
+    cursor: pointer;
+    transition: var(--transicion);
+}
+
+.modal-x:hover {
+    background: var(--gray-100);
+    color: var(--negro);
+}
+
+.modal-cuerpo {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 10px;
+    padding: 20px 24px;
+    overflow-y: auto;
+}
+
+.materia-opcion {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    padding: 9px 12px;
+    border: 1px solid var(--borde);
+    border-radius: var(--radio-sm);
+    font-size: 13px;
+    cursor: pointer;
+    transition: var(--transicion);
+}
+
+.materia-opcion:hover {
+    border-color: var(--rojo);
+    background: #fffafa;
+}
+
+.materia-opcion input {
+    width: 16px;
+    height: 16px;
+    accent-color: var(--rojo);
+}
+
+.modal-pie {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    padding: 18px 24px;
+    background: var(--gray-50);
+    border-top: 1px solid var(--borde);
+}
+
+.modal-pie .boton-cancelar,
+.modal-pie .boton-tarjeta {
+    margin: 0;
+}
+
+@media (max-width: 750px) {
+    .modal-cuerpo {
+        grid-template-columns: 1fr;
+    }
+
+    .plantel-aviso {
+        align-items: flex-start;
+    }
+}
