@@ -182,6 +182,16 @@
         datos.appendChild(cargo);
 
         cabecera.appendChild(datos);
+
+        var diasActivos = DIAS.filter(function (dia) {
+            return Boolean(docente.dias[dia]);
+        }).length;
+
+        var badge = document.createElement('span');
+        badge.className = 'docente-badge';
+        badge.textContent = diasActivos + (diasActivos === 1 ? ' día' : ' días');
+        cabecera.appendChild(badge);
+
         tarjeta.appendChild(cabecera);
 
         var dias = document.createElement('div');
@@ -213,7 +223,7 @@
                 elemento.className = 'docente-curso';
 
                 if (chip.tipo === 'tarde') {
-                    elemento.className += ' docente-curso-tarde';
+                    elemento.className += ' docente-curso-turno';
                 }
 
                 elemento.textContent = chip.texto;
