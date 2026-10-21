@@ -493,6 +493,12 @@ textarea:focus-visible {
     margin-top: 0;
 }
 
+.boton-ingresar:disabled {
+    opacity: 0.72;
+    cursor: wait;
+    transform: none;
+}
+
 .usuario-activo {
     display: inline-flex;
     align-items: center;
@@ -1745,6 +1751,10 @@ footer {
 }
 
 @media (max-width: 480px) {
+
+    .login {
+        padding: 28px 22px;
+    }
 
     .barra-superior h2 {
         font-size: 17px;

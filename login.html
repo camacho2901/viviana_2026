@@ -12,6 +12,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Sora:wght@600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="estilos.css">
+    <script src="sesion.js"></script>
 </head>
 
 <body>
@@ -106,12 +107,18 @@
                         de la Unidad Educativa.
                     </p>
 
-                    <form>
+                    <form method="post" action="login.html">
 
-                        <p class="login-error" id="login-error" hidden></p>
+                        <p
+                            class="login-error"
+                            id="login-error"
+                            role="alert"
+                            aria-live="polite"
+                            hidden
+                        ></p>
 
                         <label for="ci">
-                            Usuario o carnet de identidad
+                            Usuario (carnet de identidad)
                         </label>
 
                         <input
@@ -120,6 +127,8 @@
                             name="ci"
                             placeholder="Ingresa tu usuario o carnet"
                             autocomplete="username"
+                            autocapitalize="none"
+                            spellcheck="false"
                             required
                         >
 
@@ -140,7 +149,7 @@
                             type="submit"
                             class="boton-ingresar"
                         >
-                            Ingresar
+                            Iniciar sesión
                         </button>
 
                     </form>
@@ -148,14 +157,9 @@
                 </div>
 
                 <p class="login-info">
-                    La plataforma contará con un sistema de acceso mediante
-                    el número de carnet de identidad del estudiante. Una vez
-                    que el usuario ingrese, podrá visualizar automáticamente
-                    la información correspondiente a su curso, como
-                    comunicados, horarios, actividades, avisos y otros
-                    contenidos importantes. De esta manera, cada estudiante
-                    y su familia accederán únicamente a la información que
-                    realmente necesitan.
+                    Accede con las credenciales entregadas por la Unidad
+                    Educativa para consultar comunicados, horarios,
+                    actividades y recursos educativos.
                 </p>
 
             </section>
@@ -205,7 +209,6 @@
     </div>
 
     <script src="usuarios.js"></script>
-    <script src="sesion.js"></script>
     <script src="login.js"></script>
 
 </body>
