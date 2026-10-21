@@ -83,7 +83,7 @@
                 return;
             }
 
-            window.location.href = 'index.html?v=20261021';
+            window.location.href = 'index.html?v=20261021b';
         } catch (error) {
             mostrarError('No se pudo iniciar sesión. Intenta nuevamente.');
         } finally {

@@ -3,7 +3,7 @@
 
     var CLAVE = 'sesion_san_ignacio';
     var DURACION_SESION = 8 * 60 * 60 * 1000;
-    var VERSION = '20261021';
+    var VERSION = '20261021b';
     var PAGINA_LOGIN = /(^|\/)login\.html$/i.test(window.location.pathname);
 
     function leerSesion() {
