@@ -27,32 +27,32 @@
     });
 
     var PLANTEL = [
-        { nombre: 'Victor', dias: { LUNES: '4B/4B-6A/6A', MARTES: '3B/6A/6B', MIÉRCOLES: '5B/5B-6B/6B', JUEVES: '5B/3B/4B', VIERNES: '3B', SÁBADO: '' } },
-        { nombre: 'Lidia', dias: { LUNES: '5A/5A-2A/2A', MARTES: '4A/4A-3A/3A', MIÉRCOLES: '2A/3A/5A', JUEVES: '4A', VIERNES: '', SÁBADO: '' } },
-        { nombre: 'Inés', dias: { LUNES: 'TARDE:3B/3B/3B', MARTES: '2B/2B/1B T:3B', MIÉRCOLES: '1B/1A/1A', JUEVES: '2B/1A/1B', VIERNES: '', SÁBADO: '' } },
-        { nombre: 'Emeteria', dias: { LUNES: '', MARTES: '5B/6B/5A', MIÉRCOLES: '1A/1A-1B/1B', JUEVES: '6B/6B/5B', VIERNES: '6B/5A/5A', SÁBADO: '5A/5B/5B' } },
+        { nombre: 'Victor', imagen: 'img/victor.jpg', dias: { LUNES: '4B/4B-6A/6A', MARTES: '3B/6A/6B', MIÉRCOLES: '5B/5B-6B/6B', JUEVES: '5B/3B/4B', VIERNES: '3B', SÁBADO: '' } },
+        { nombre: 'Lidia', imagen: 'img/lidia.jpg', dias: { LUNES: '5A/5A-2A/2A', MARTES: '4A/4A-3A/3A', MIÉRCOLES: '2A/3A/5A', JUEVES: '4A', VIERNES: '', SÁBADO: '' } },
+        { nombre: 'Inés',  imagen: 'img/ines.jpg', dias: { LUNES: 'TARDE:3B/3B/3B', MARTES: '2B/2B/1B T:3B', MIÉRCOLES: '1B/1A/1A', JUEVES: '2B/1A/1B', VIERNES: '', SÁBADO: '' } },
+        { nombre: 'Emeteria', imagen: 'img/emeteria.jpg', dias: { LUNES: '', MARTES: '5B/6B/5A', MIÉRCOLES: '1A/1A-1B/1B', JUEVES: '6B/6B/5B', VIERNES: '6B/5A/5A', SÁBADO: '5A/5B/5B' } },
         { nombre: 'Teodora', dias: { LUNES: '2A/2A-4B/4B', MARTES: '4A/4A', MIÉRCOLES: '', JUEVES: '', VIERNES: '4B/4A', SÁBADO: '' } },
-        { nombre: 'Corina', dias: { LUNES: '', MARTES: '3A/3A-2B/2B', MIÉRCOLES: '3B/6A/5AB', JUEVES: '4BA/3A/6A', VIERNES: '3B/3B', SÁBADO: '6A/6A/6BA' } },
-        { nombre: 'Maria C.', dias: { LUNES: '3B/2B', MARTES: '1B/1A', MIÉRCOLES: '3A/2B', JUEVES: '', VIERNES: '1A/3A/1B', SÁBADO: '2B/2A/3B' } },
-        { nombre: 'Zenobia', dias: { LUNES: '3A', MARTES: '', MIÉRCOLES: '', JUEVES: '', VIERNES: '3A', SÁBADO: '3A' } },
-        { nombre: 'Valeria S.', dias: { LUNES: '', MARTES: '', MIÉRCOLES: '', JUEVES: '', VIERNES: '', SÁBADO: '1B/1A' } },
-        { nombre: 'Celia P.', dias: { LUNES: '2B/3A/5B', MARTES: '2A', MIÉRCOLES: '', JUEVES: '', VIERNES: '5A/6B/6A', SÁBADO: '4B/3B/4A' } },
-        { nombre: 'Raquel G.', dias: { LUNES: '6A/6A-5A/5A', MARTES: '1A/4B', MIÉRCOLES: '', JUEVES: '2A/4A/1A', VIERNES: '2A/4B/1A', SÁBADO: '4A' } },
-        { nombre: 'Linet', dias: { LUNES: '1B/2B/3B', MARTES: '', MIÉRCOLES: '6B/6B-5B/3B', JUEVES: '1B/2B/3B', VIERNES: '5B/1B/2B', SÁBADO: '' } },
-        { nombre: 'Paola A.', dias: { LUNES: '', MARTES: '', MIÉRCOLES: '', JUEVES: '1B/2B', VIERNES: '', SÁBADO: '' } },
-        { nombre: 'Mildred', dias: { LUNES: '6B/5B/4A', MARTES: '4B/5B/6A', MIÉRCOLES: '5A/4A/6A', JUEVES: '5A/4B/6B', VIERNES: '', SÁBADO: '' } },
-        { nombre: 'Sofia C.', dias: { LUNES: '', MARTES: '', MIÉRCOLES: '', JUEVES: '', VIERNES: '', SÁBADO: '3A4B' } },
+        { nombre: 'Corina', imagen: 'img/corina.jpg', dias: { LUNES: '', MARTES: '3A/3A-2B/2B', MIÉRCOLES: '3B/6A/5AB', JUEVES: '4BA/3A/6A', VIERNES: '3B/3B', SÁBADO: '6A/6A/6BA' } },
+        { nombre: 'Maria C.',  imagen: 'img/maria.png', dias: { LUNES: '3B/2B', MARTES: '1B/1A', MIÉRCOLES: '3A/2B', JUEVES: '', VIERNES: '1A/3A/1B', SÁBADO: '2B/2A/3B' } },
+        { nombre: 'Zenobia',  imagen: 'img/zenobia.png', dias: { LUNES: '3A', MARTES: '', MIÉRCOLES: '', JUEVES: '', VIERNES: '3A', SÁBADO: '3A' } },
+        { nombre: 'Valeria S.', imagen: 'img/valeria.jpg', dias: { LUNES: '', MARTES: '', MIÉRCOLES: '', JUEVES: '', VIERNES: '', SÁBADO: '1B/1A' } },
+        { nombre: 'Celia P.', imagen: 'img/celia.jpg', dias: { LUNES: '2B/3A/5B', MARTES: '2A', MIÉRCOLES: '', JUEVES: '', VIERNES: '5A/6B/6A', SÁBADO: '4B/3B/4A' } },
+        { nombre: 'Raquel G.', imagen: 'img/raquel.jpg', dias: { LUNES: '6A/6A-5A/5A', MARTES: '1A/4B', MIÉRCOLES: '', JUEVES: '2A/4A/1A', VIERNES: '2A/4B/1A', SÁBADO: '4A' } },
+        { nombre: 'Linet', imagen: 'img/linet.jpg', dias: { LUNES: '1B/2B/3B', MARTES: '', MIÉRCOLES: '6B/6B-5B/3B', JUEVES: '1B/2B/3B', VIERNES: '5B/1B/2B', SÁBADO: '' } },
+        { nombre: 'Paola A.', imagen: 'img/paola.jpg', dias: { LUNES: '', MARTES: '', MIÉRCOLES: '', JUEVES: '1B/2B', VIERNES: '', SÁBADO: '' } },
+        { nombre: 'Mildred', imagen: 'img/mildred.jpg', dias: { LUNES: '6B/5B/4A', MARTES: '4B/5B/6A', MIÉRCOLES: '5A/4A/6A', JUEVES: '5A/4B/6B', VIERNES: '', SÁBADO: '' } },
+        { nombre: 'Sofia C.', imagen: 'img/sofia.png', dias: { LUNES: '', MARTES: '', MIÉRCOLES: '', JUEVES: '', VIERNES: '', SÁBADO: '3A4B' } },
         { nombre: 'Nilza', dias: { LUNES: '', MARTES: '5A/3B', MIÉRCOLES: '1B/2B', JUEVES: '1A/4A', VIERNES: '6A/2A/5B', SÁBADO: '6B' } },
-        { nombre: 'Celia C.', dias: { LUNES: 'TARDE:3A/3A/3A', MARTES: '', MIÉRCOLES: '', JUEVES: 'TARDE.3A', VIERNES: '1B/1A', SÁBADO: '1A/1B' } },
-        { nombre: 'Javier', dias: { LUNES: '', MARTES: 'TARDE: 5A/5A/5A', MIÉRCOLES: 'TARDE:5B/5B/5B', JUEVES: 'TARDE:5A/5A/5A', VIERNES: 'TARDE:5B/5B/5B', SÁBADO: '' } },
-        { nombre: 'Eduardo', dias: { LUNES: 'TARDE:4B/4B', MARTES: '', MIÉRCOLES: 'TARDE:4A/4A/4A', JUEVES: '', VIERNES: 'TARDE:4A/4B/4B', SÁBADO: '2B2B' } },
-        { nombre: 'Jose F.', dias: { LUNES: 'TARDE:6A/6A/6A', MARTES: 'TARDE:6B/6B/6B', MIÉRCOLES: 'TARDE:6A/6A/6A', JUEVES: '2A2A TARDE:6B6B6B', VIERNES: '', SÁBADO: '' } },
-        { nombre: 'Benicio', dias: { LUNES: '3B/4A/6B', MARTES: '2A/1B/1A', MIÉRCOLES: '2B/4B/3A', JUEVES: '6A/5B/5A', VIERNES: '', SÁBADO: '' } },
-        { nombre: 'Jaime', dias: { LUNES: '5B/1B/1A', MARTES: '6A/5A/3B', MIÉRCOLES: '', JUEVES: '', VIERNES: '4A/2B/6B', SÁBADO: '2A/3A/4B' } },
-        { nombre: 'Raquel T.', dias: { LUNES: '', MARTES: '6B/4B/5B', MIÉRCOLES: '6A/5A/4A', JUEVES: '', VIERNES: '', SÁBADO: '' } },
-        { nombre: 'Sonia', dias: { LUNES: '', MARTES: '', MIÉRCOLES: '4A/3B/4B', JUEVES: '3A/5A', VIERNES: '3A/5B/3B', SÁBADO: '6B/6A' } },
-        { nombre: 'Janneth', dias: { LUNES: '4A/1A/1B', MARTES: '', MIÉRCOLES: '', JUEVES: '', VIERNES: '2B/6A/2A', SÁBADO: '3B/5A/3A' } },
-        { nombre: 'Alejandro', dias: { LUNES: '1A/6B/3A', MARTES: '', MIÉRCOLES: '4B/2A', JUEVES: '3B/6A', VIERNES: '', SÁBADO: '5B/4A/5A' } }
+        { nombre: 'Celia C.', imagen: 'img/celiachoque.jpg', dias: { LUNES: 'TARDE:3A/3A/3A', MARTES: '', MIÉRCOLES: '', JUEVES: 'TARDE.3A', VIERNES: '1B/1A', SÁBADO: '1A/1B' } },
+        { nombre: 'Javier', imagen: 'img/javier.jpg', dias: { LUNES: '', MARTES: 'TARDE: 5A/5A/5A', MIÉRCOLES: 'TARDE:5B/5B/5B', JUEVES: 'TARDE:5A/5A/5A', VIERNES: 'TARDE:5B/5B/5B', SÁBADO: '' } },
+        { nombre: 'Eduardo', imagen: 'img/eduardo.jpg', dias: { LUNES: 'TARDE:4B/4B', MARTES: '', MIÉRCOLES: 'TARDE:4A/4A/4A', JUEVES: '', VIERNES: 'TARDE:4A/4B/4B', SÁBADO: '2B2B' } },
+        { nombre: 'Jose F.', imagen: 'img/jose.jpg', dias: { LUNES: 'TARDE:6A/6A/6A', MARTES: 'TARDE:6B/6B/6B', MIÉRCOLES: 'TARDE:6A/6A/6A', JUEVES: '2A2A TARDE:6B6B6B', VIERNES: '', SÁBADO: '' } },
+        { nombre: 'Benicio', imagen: 'img/benicio.jpg', dias: { LUNES: '3B/4A/6B', MARTES: '2A/1B/1A', MIÉRCOLES: '2B/4B/3A', JUEVES: '6A/5B/5A', VIERNES: '', SÁBADO: '' } },
+        { nombre: 'Jaime', imagen: 'img/jaime.jpg', dias: { LUNES: '5B/1B/1A', MARTES: '6A/5A/3B', MIÉRCOLES: '', JUEVES: '', VIERNES: '4A/2B/6B', SÁBADO: '2A/3A/4B' } },
+        { nombre: 'Raquel T.', imagen: 'img/raqueltovar.jpg', dias: { LUNES: '', MARTES: '6B/4B/5B', MIÉRCOLES: '6A/5A/4A', JUEVES: '', VIERNES: '', SÁBADO: '' } },
+        { nombre: 'Sonia', imagen: 'img/sonia.png', dias: { LUNES: '', MARTES: '', MIÉRCOLES: '4A/3B/4B', JUEVES: '3A/5A', VIERNES: '3A/5B/3B', SÁBADO: '6B/6A' } },
+        { nombre: 'Janneth', imagen: 'img/janneth.jpg', dias: { LUNES: '4A/1A/1B', MARTES: '', MIÉRCOLES: '', JUEVES: '', VIERNES: '2B/6A/2A', SÁBADO: '3B/5A/3A' } },
+        { nombre: 'Alejandro', imagen: 'img/alejandro.png', dias: { LUNES: '1A/6B/3A', MARTES: '', MIÉRCOLES: '4B/2A', JUEVES: '3B/6A', VIERNES: '', SÁBADO: '5B/4A/5A' } }
     ];
 
     var CLAVE_MATERIAS = 'materias_san_ignacio';
@@ -167,7 +167,24 @@
 
         var avatar = document.createElement('div');
         avatar.className = 'docente-avatar';
-        avatar.textContent = iniciales(docente.nombre);
+
+        if (docente.imagen) {
+            var imagen = document.createElement('img');
+            imagen.src = docente.imagen;
+            imagen.alt = 'Prof. ' + docente.nombre;
+            imagen.className = 'docente-foto';
+            imagen.decoding = 'async';
+            imagen.addEventListener('error', function () {
+                avatar.innerHTML = '';
+                avatar.className = 'docente-avatar docente-avatar-iniciales';
+                avatar.textContent = iniciales(docente.nombre);
+            });
+            avatar.appendChild(imagen);
+        } else {
+            avatar.className = 'docente-avatar docente-avatar-iniciales';
+            avatar.textContent = iniciales(docente.nombre);
+        }
+
         cabecera.appendChild(avatar);
 
         var datos = document.createElement('div');
@@ -467,6 +484,7 @@
         asignaciones[docenteEditando] = seleccionadas;
 
         if (!guardarAsignaciones(asignaciones)) {
+            alert('No se pudieron guardar las materias. El almacenamiento del navegador está lleno o bloqueado.');
             return;
         }
 

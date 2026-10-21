@@ -12,7 +12,12 @@
     }
 
     function cerrarSesion() {
-        localStorage.removeItem(CLAVE);
+        try {
+            localStorage.removeItem(CLAVE);
+        } catch (error) {
+            // Si el navegador bloquea el almacenamiento, igual se recarga la página.
+        }
+
         window.location.reload();
     }
 
@@ -22,7 +27,7 @@
         var contenedor = document.querySelector('.acciones-superior') ||
             document.querySelector('.barra-superior');
 
-        if (!sesion || !contenedor) {
+        if (!sesion || !sesion.ci || !contenedor) {
             return;
         }
 

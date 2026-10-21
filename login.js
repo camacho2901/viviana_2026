@@ -34,11 +34,16 @@
             return;
         }
 
-        localStorage.setItem(CLAVE_SESION, JSON.stringify({
-            ci: cuenta.usuario,
-            rol: cuenta.rol,
-            inicio: new Date().toISOString()
-        }));
+        try {
+            localStorage.setItem(CLAVE_SESION, JSON.stringify({
+                ci: cuenta.usuario,
+                rol: cuenta.rol,
+                inicio: new Date().toISOString()
+            }));
+        } catch (error) {
+            mostrarError('No se pudo iniciar sesión. Revisa la configuración del navegador.');
+            return;
+        }
 
         window.location.href = 'comunicados.html';
     }

@@ -68,7 +68,12 @@
     }
 
     function guardarDatos(datos) {
-        localStorage.setItem(CLAVE_DATOS, JSON.stringify(datos));
+        try {
+            localStorage.setItem(CLAVE_DATOS, JSON.stringify(datos));
+            return true;
+        } catch (error) {
+            return false;
+        }
     }
 
     function obtenerSesion() {
@@ -322,7 +327,10 @@
             });
         }
 
-        guardarDatos(datos);
+        if (!guardarDatos(datos)) {
+            alert('No se pudo guardar. El almacenamiento del navegador está lleno o bloqueado.');
+            return;
+        }
         salirEdicion();
         render();
     }
@@ -347,7 +355,10 @@
         var datos = leerDatos().filter(function (dato) {
             return dato.id !== id;
         });
-        guardarDatos(datos);
+        if (!guardarDatos(datos)) {
+            alert('No se pudo guardar. El almacenamiento del navegador está lleno o bloqueado.');
+            return;
+        }
 
         if (idEnEdicion === id) {
             salirEdicion();

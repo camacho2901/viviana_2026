@@ -512,6 +512,7 @@
         HORARIOS[editando.curso][editando.turno] = nuevo;
 
         if (!guardarHorarios()) {
+            alert('No se pudo guardar el horario. El almacenamiento del navegador está lleno o bloqueado.');
             return;
         }
 

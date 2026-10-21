@@ -1,12 +1,3 @@
-/* =========================================================================
-   SAN IGNACIO DE LOYOLA - SISTEMA DE DISEÑO
-   Paleta: Azul marino + Guindo + Blanco + Negro
-   ========================================================================= */
-
-/* =========================================
-   1. TOKENS DE DISEÑO
-========================================= */
-
 :root {
     /* Azul oscuro */
     --navy-900: #14213f;
@@ -534,10 +525,21 @@ textarea:focus-visible {
     background: #f8e7ea;
     transform: translateY(-2px);
 }
+.imagen-superior {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    background: var(--blanco);
+    overflow: hidden;
+}
 
-/* =========================================
-   6. HERO
-========================================= */
+.imagen-superior img {
+    width: auto;
+    max-width: 100%;
+    max-height: 400px;
+    height: auto;
+    display: block;
+}
 
 .hero {
     min-height: 480px;
@@ -546,7 +548,7 @@ textarea:focus-visible {
     padding: 60px;
     background-image:
         linear-gradient(rgba(28, 49, 94, 0.85), rgba(14, 14, 16, 0.88)),
-        url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRSVLHzj5W8ox091CoyPTB5MSC0ag2upLUj8C2b3s9TCWr41BCkkrJ-tNOh&s=10");
+        url("colegio.jpg.jpeg");
     background-size: cover;
     background-position: center;
     position: relative;
@@ -636,11 +638,6 @@ textarea:focus-visible {
     box-shadow: 0 16px 34px rgba(0, 0, 0, 0.35);
     color: var(--blanco);
 }
-
-/* =========================================
-   7. SECCIONES Y TÍTULOS
-========================================= */
-
 section {
     padding: 65px 45px;
 }
@@ -692,11 +689,6 @@ section {
     font-size: 14px;
     margin-bottom: 30px;
 }
-
-/* =========================================
-   8. TARJETAS
-========================================= */
-
 .tarjetas {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -796,7 +788,6 @@ section {
     line-height: 1.65;
 }
 
-/* Noticias */
 .noticias {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -1203,11 +1194,6 @@ section {
     font-size: 13px;
     font-style: italic;
 }
-
-/* =========================================
-   11. TABLAS
-========================================= */
-
 .tabla-contenedor {
     overflow-x: auto;
     background: var(--blanco);
@@ -1442,11 +1428,6 @@ tr:hover td {
     border: none;
     display: block;
 }
-
-/* =========================================
-   14. INICIO: HISTORIA, FUNDADORES E IDENTIDAD
-========================================= */
-
 .linea-tiempo {
     list-style: none;
     position: relative;
@@ -1458,12 +1439,12 @@ tr:hover td {
 .linea-tiempo::before {
     content: "";
     position: absolute;
-    left: 15px;
+    left: 20px;
     top: 0;
     bottom: 0;
-    width: 3px;
-    background: linear-gradient(180deg, var(--guindo), var(--navy-700));
-    border-radius: 3px;
+    width: 4px;
+    background: linear-gradient(180deg,var(--guindo),#c9a227,var(--guindo));
+    border-radius: 10px;
 }
 
 .linea-tiempo li {
@@ -1491,7 +1472,7 @@ tr:hover td {
 
 .linea-tiempo .anio {
     display: inline-block;
-    color: var(--negro);
+    color: #8a6a12;
     font-size: 14px;
     font-weight: 700;
     letter-spacing: 0.5px;
@@ -1922,20 +1903,19 @@ footer {
 }
 
 .docente-avatar {
-    flex-shrink: 0;
-    width: 48px;
-    height: 48px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: linear-gradient(135deg, var(--guindo-600), var(--guindo-800));
-    color: var(--blanco);
+    width: 80px;
+    height: 80px;
     border-radius: 50%;
-    font-size: 15px;
-    font-weight: 800;
-    letter-spacing: 0.5px;
+    overflow: hidden;
+    flex-shrink: 0;
 }
 
+.docente-foto {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
 .docente-nombre {
     color: var(--negro);
     font-size: 16px;
@@ -2437,4 +2417,16 @@ a.materia-chip:focus-visible {
     .turno-cabecera {
         align-items: flex-start;
     }
+}
+
+/* Ajustes de fotografías del plantel */
+.docente-avatar-iniciales {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, var(--guindo-600), var(--guindo-800));
+    color: var(--blanco);
+    font-size: 20px;
+    font-weight: 800;
+    letter-spacing: 0.5px;
 }
