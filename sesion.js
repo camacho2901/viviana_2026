@@ -3,7 +3,7 @@
 
     var CLAVE = 'sesion_san_ignacio';
     var DURACION_SESION = 8 * 60 * 60 * 1000;
-    var VERSION = '20261021b';
+    var VERSION = '20261021m';
     var PAGINA_LOGIN = /(^|\/)login\.html$/i.test(window.location.pathname);
 
     function leerSesion() {
@@ -79,6 +79,11 @@
         var acceso = contenedor.querySelector('.boton-acceso');
         if (acceso) {
             acceso.hidden = true;
+        }
+
+        var menuLogin = document.querySelector('.menu-login');
+        if (menuLogin) {
+            menuLogin.hidden = true;
         }
 
         var chip = document.createElement('span');
