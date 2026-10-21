@@ -2,13 +2,33 @@
     'use strict';
 
     var CLAVE = 'sesion_san_ignacio';
+    var DURACION_SESION = 8 * 60 * 60 * 1000;
     var PAGINA_LOGIN = /(^|\/)login\.html$/i.test(window.location.pathname);
 
     function leerSesion() {
         try {
             var sesion = JSON.parse(localStorage.getItem(CLAVE) || 'null');
 
-            if (!sesion || !sesion.ci || !sesion.rol || !sesion.expira || Date.now() >= sesion.expira) {
+            if (!sesion || !sesion.ci || !sesion.rol) {
+                localStorage.removeItem(CLAVE);
+                return null;
+            }
+
+            // Migra sesiones creadas antes de agregar la expiración.
+            if (!sesion.expira) {
+                sesion.inicio = sesion.inicio || new Date().toISOString();
+                sesion.expira = Date.now() + DURACION_SESION;
+
+                try {
+                    localStorage.setItem(CLAVE, JSON.stringify(sesion));
+                } catch (errorGuardado) {
+                    // Si no se puede guardar, la sesión actual sigue siendo válida.
+                }
+
+                return sesion;
+            }
+
+            if (!isFinite(Number(sesion.expira)) || Date.now() >= Number(sesion.expira)) {
                 localStorage.removeItem(CLAVE);
                 return null;
             }
