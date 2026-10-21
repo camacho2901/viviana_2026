@@ -3,6 +3,7 @@
 
     var CLAVE = 'sesion_san_ignacio';
     var DURACION_SESION = 8 * 60 * 60 * 1000;
+    var VERSION = '20261021';
     var PAGINA_LOGIN = /(^|\/)login\.html$/i.test(window.location.pathname);
 
     function leerSesion() {
@@ -48,12 +49,12 @@
     var sesion = leerSesion();
 
     if (!PAGINA_LOGIN && !sesion) {
-        window.location.replace('login.html');
+        window.location.replace('login.html?v=' + VERSION);
         return;
     }
 
     if (PAGINA_LOGIN && sesion) {
-        window.location.replace('index.html');
+        window.location.replace('index.html?v=' + VERSION);
         return;
     }
 
@@ -64,7 +65,7 @@
             // Si el navegador bloquea el almacenamiento, igual se redirige al login.
         }
 
-        window.location.replace('login.html');
+        window.location.replace('login.html?v=' + VERSION);
     }
 
     document.addEventListener('DOMContentLoaded', function () {
